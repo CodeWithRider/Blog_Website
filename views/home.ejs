@@ -1,0 +1,16 @@
+<!-- link header -->
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p><%= paragraph %></p>
+<% allPost.forEach(function(post){ %>
+    <h1><%= post.title %></h1>
+    <p>
+        <%= post.content.substring(0,100).concat("...") %>
+        <a href="/posts/<%=post._id%>">(Read More)</a>
+    </p>
+    
+<%})%>
+
+<!-- link footer -->
+<%- include("partials/footer"); -%>
